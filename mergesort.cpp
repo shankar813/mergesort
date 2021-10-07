@@ -22,17 +22,8 @@ void merge(int *array, int l, int m, int r) {
    for(j = 0; j<nr; j++)
       rarr[j] = array[m+1+j];
    i = 0; j = 0; k = l;
-   //marge temp arrays to real array
-   while(i < nl && j<nr) {
-      if(larr[i] <= rarr[j]) {
-         array[k] = larr[i];
-         i++;
-      }else{
-         array[k] = rarr[j];
-         j++;
-      }
-      k++;
-   }
+#no need temp array
+   
    while(i<nl) {       //extra element in left array
       array[k] = larr[i];
       i++; k++;
